@@ -20,6 +20,7 @@ pipeline {
 
       stage('Actual Command') {
         steps {
+          bat 'mvn test'
           echo 'mvn test -Dcucumber.filter.tags="@APItests"'
         }
       }
