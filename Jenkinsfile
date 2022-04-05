@@ -2,25 +2,23 @@ pipeline {
     agent any
 
     stages {
-      stage('build') {
-        steps {
-          echo 'Build Stage'
-        }
-      }
 
-      stage('test') {
+      stage('Compile') {
         steps {
-          echo 'Test Stage'
+          echo 'Compiling the code'
           bat '''
           cd DummyTest
-          mvn test
+          mvn clean compile
           '''
         }
       }
 
-      stage('Actual Command') {
+      stage('Run tests') {
         steps {
-          bat 'mvn test'
+          bat '''
+          cd DummyTest
+          mvn test
+          '''
           echo 'mvn test -Dcucumber.filter.tags="@APItests"'
         }
       }
