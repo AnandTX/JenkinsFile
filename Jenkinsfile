@@ -14,6 +14,7 @@ pipeline {
       stage('test') {
         steps {
           echo 'Test Stage'
+          bat 'mvn -Dapp=${APP_NAME} --v'
         }
       }
 
