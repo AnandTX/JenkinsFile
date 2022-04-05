@@ -18,6 +18,12 @@ pipeline {
         }
       }
 
+      stage('Actual Command') {
+        steps {
+          echo 'mvn test -Dcucumber.filter.tags="@APItests"'
+        }
+      }
+
     }
 
 }
