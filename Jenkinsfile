@@ -13,7 +13,7 @@ pipeline {
           echo 'Test Stage'
           bat '''
           cd DummyTest
-          mvn -Dapp=${APP_NAME} --v
+          mvn test
           '''
         }
       }
