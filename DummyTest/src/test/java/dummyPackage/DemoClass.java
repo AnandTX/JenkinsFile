@@ -6,8 +6,8 @@ public class DemoClass {
 
     @Test
     public void test1() {
-        System.out.println(System.getProperty("app"));
+        System.out.println(System.getProperty("APP_NAME"));
         System.out.println("\n");
-        System.out.println(System.getProperty("pwd"));
+        System.out.println(System.getProperty("PASSWORD"));
     }
 }
