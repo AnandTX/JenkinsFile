@@ -44,6 +44,7 @@
 
                         <systemPropertyVariables>
                             <APP_NAME>${app}</APP_NAME>
+                            <PASSOWRD>${pwd}</PASSOWRD>
                         </systemPropertyVariables>
                     </configuration>
                 </plugin>
