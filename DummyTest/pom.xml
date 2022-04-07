@@ -42,10 +42,10 @@
                             <suiteXmlFile>testng.xml</suiteXmlFile>
                         </suiteXmlFiles>
 
-                        <systemPropertyVariables>
-                            <APP_NAME>${app}</APP_NAME>
-                            <PASSOWRD>${pwd}</PASSOWRD>
-                        </systemPropertyVariables>
+<!--                        <systemPropertyVariables>-->
+<!--                            <APP_NAME>${app}</APP_NAME>-->
+<!--                            <PASSOWRD>${pwd}</PASSOWRD>-->
+<!--                        </systemPropertyVariables>-->
                     </configuration>
                 </plugin>
                 <plugin>
