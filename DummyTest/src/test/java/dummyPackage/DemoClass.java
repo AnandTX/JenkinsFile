@@ -10,9 +10,5 @@ public class DemoClass {
         System.out.println("\n");
         System.out.println(System.getProperty("PASSWORD_VALUE"));
         System.out.println("\n");
-        System.out.println(System.getProperty("app"));
-        System.out.println("\n");
-        System.out.println(System.getProperty("pwd"));
-        System.out.println("\n");
     }
 }
