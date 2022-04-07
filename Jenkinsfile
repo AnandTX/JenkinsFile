@@ -15,11 +15,11 @@ pipeline {
 
       stage('Run tests') {
         steps {
-        withCredentials([
-          usernamePassword(credentialsId: 'Test',
-            usernameVariable: 'UNAME_VAR',
-            passwordVariable: 'PWD_VAR')
-        ])
+          withCredentials([
+            usernamePassword(credentialsId: 'Test',
+              usernameVariable: 'UNAME_VAR',
+              passwordVariable: 'PWD_VAR')
+          ])
           echo '###### Run Tests ######'
           bat '''
           cd DummyTest
