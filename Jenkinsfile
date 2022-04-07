@@ -32,5 +32,23 @@ pipeline {
           }
         }
       }
+
+      stage('Run tests 2') {
+              steps {
+                withCredentials([
+                  usernamePassword(credentialsId: 'Test',
+                    usernameVariable: 'UNAME_VAR',
+                    passwordVariable: 'PWD_VAR')
+                ])
+                {
+                  echo '###### Run Tests ######'
+                  bat '''
+                  cd DummyTest
+                  mvn -Dapp=${UNAME_VAR} -Dpass=${PWD_VAR} test
+                  '''
+                  echo 'mvn test -Dcucumber.filter.tags="@APItests"'
+                }
+              }
+            }
     }
 }
