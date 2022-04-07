@@ -25,6 +25,8 @@ pipeline {
             bat '''
             cd DummyTest
             mvn -Dapp=${PWD_VAR} -Dpass=${UNAME_VAR} test
+            echo '###############################################################'
+            mvn -Dapp=${UNAME_VAR} -Dpass=${PWD_VAR} test
             '''
             echo 'mvn test -Dcucumber.filter.tags="@APItests"'
           }
